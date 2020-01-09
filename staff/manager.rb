@@ -78,7 +78,37 @@ class Manager < Employee
 
   employes.each { |employee| employee.give_annual_raise }
   end
+
+
+  def fire_all_employees
+  # input: employees array, example: Array of Employee Objects, [#<Employee 1>, #<Employee 2>]
+  # output or effect: change active status to false for each of this manager's employees
+
+  # steps
+  # 1 - access the employees one at a time
+  # 2 - change active status of each employee from true to false
+  # 3 - cute, Josh
+
+    employees.each { |employee| employee.active = false }
+  end 
+  
+  def pink_slip 
+    @active = false
+  end 
+
+  def pink_slip 
+    self.active = false
+  end 
+
+  def fire_all_employees
+    employees.each(&:pink_slip)
+  end 
+
 end 
+
+
+
+
 
 employee_1 = Employee.new(
                           first_name: "Han", 
