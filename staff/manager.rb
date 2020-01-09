@@ -47,7 +47,38 @@ class Manager < Employee
     # code to send Email
     puts "Email sent."
   end
-end
+
+  def give_all_raises
+  # input: employees array, example: Array of employee objects [#<Employee 1>, #<Employee 2>]
+  # output or effect: increase alary of all employees for this manager by 5%.
+
+  # steps
+  # 1- take employees for this manager one at a time
+  # 2- increase salary for the individual employee
+  # by multiplying their salary by 105% 
+
+# p employees
+  # index = 0
+
+  # while index < employees.length
+  #   employee = employees[index]
+  #   employee.salary = employee.salary * 1.05
+  #   p employee
+
+  #   index += 1
+  # end 
+
+  # employees.length.times do |index|
+  #   employee = employees[index]
+  #   employee.salary = employee.salary * 1.05
+  #   p employee
+
+  #   index += 1
+  # end 
+
+  employes.each { |employee| employee.give_annual_raise }
+  end
+end 
 
 employee_1 = Employee.new(
                           first_name: "Han", 
@@ -86,3 +117,12 @@ employee_1
 employee_2
 p manager_2.fire_all_employees
 p manager_2.fine_all_employees
+
+# def thing 
+#   puts "hello"
+#   p self 
+# end 
+
+
+
+
